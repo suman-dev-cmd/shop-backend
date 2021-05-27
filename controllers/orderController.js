@@ -1,7 +1,7 @@
 const Order = require('../model/order');
 const ErrorHandler = require('../utils/errorHandler');
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
-const product = require('../model/product');
+const Product = require('../model/product');
 
 exports.newOrder = catchAsyncErrors(async (req, res,next) => {
     const {shippingInfo,

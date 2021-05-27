@@ -22,7 +22,7 @@ router.route('/admin/product/:id')
             .delete(isAuthenticatedUser,authorizeRoles('admin'),deleteProduct)
 
 router.route('/review').put(isAuthenticatedUser,createProductReview)
-router.route('/reviews').post(isAuthenticatedUser,getProductReivews)
+router.route('/reviews').get(isAuthenticatedUser,getProductReivews)
 router.route('/reviews').delete(isAuthenticatedUser,deleteProductReivews)
 
 module.exports = router
